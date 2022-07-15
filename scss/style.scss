@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@mixin tablet {
+    @media (min-width: 451px)and (max-width: 991px){
+        @content;
+    }   
+}
+* {
+    padding: 0px;
+    font-family: 'Play', sans-serif;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-image: url(../img/universo1.jpg);
+    background-position: center;
+    flex-wrap: wrap;
+    background-repeat: repeat;
+    background-size: auto;
+   
+}
+
+
+.encabezado {
+    .encabezado_Titulo {
+        color: white;
+        align-items: center;
+        background-image: url("../img/fondo.jpg");
+        background-size: cover;
+        letter-spacing: 12px;
+        font-size: x-large;
+        height: 220px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+       }
+}
+
+.menu {
+    .menu_botones {
+        display: flex;
+        list-style: none;
+        width: 100%;
+        padding: 0px 30px;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 5px;
+        font-family: 'Play', sans-serif;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+.logo {
+    background-position: left;
+    width: 100px;
+    height: 100px;
+    @include tablet{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: flex;
+    justify-content: center;
+}
+
+.muestra {
+    display: flex;
+    color: wheat;
+    font-size: xx-large;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.bg-light {
+    --bs-bg-opacity: 0;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.nav-link {
+    color: white;
+    padding: 5px;
+    align-items: center;
+    font-size: xx-large;
+    box-shadow: 0 0 60px rgb(57, 7, 236);
+    background: linear-gradient(#4596d8, #4f57ca);
+    border-radius: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    margin: 10px;
+
+}
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: var(--bs-navbar-toggler-icon-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-color: #4596d8;
+    box-shadow: 0 0 10px rgb(179, 162, 241);;
+    border-radius: 5px;
+    color: white;
+}
+.container-fluid{
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+}
+
+//pagina2//
+.quienes {
+    color: rgb(235, 242, 243);
+    width: 35%;
+    padding: 25px;
+    border-radius: 50px;
+    font-size: large;
+    box-shadow: 0 0 60px rgb(179, 162, 241);
+    text-align: center;
+}
+
+.Texto2 {
+    color: rgb(252, 249, 249);
+    font-size: x-large;
+    box-sizing: 200px;
+    font-family: 'Play', sans-serif;
+}
+
+.Texto2_ducato2 {
+    display: flex;
+
+    .Texto2_ducato2--ducato2 img {
+        width: 33%;
+        cursor: pointer;
+    }
+}
+.collection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    grid-auto-rows: 300px;
+    grid-gap: 1rem;
+    justify-content: center;
+    
+}
+.collection article.wide {
+    grid-column-end: span 2;
+}
+.collection article.tall {
+    grid-row-end: span 2;
+}
+
+//pagina 3//
+.servicio {
+    display: flex;
+    color: rgb(235, 242, 243);
+    padding: 8px;
+    border-radius: 50px;
+    font-size: xx-large;
+    box-shadow: 0 0 60px rgb(72, 42, 179);
+    text-align: left;
+}
+
+.impresora {
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+}
+
+.descripcion {
+    color: white;
+    font-size: x-large;
+    text-indent: 20px;
+    box-shadow: 0 0 45px rgb(155, 90, 104);
+    margin: right 50px;
+    border-radius: 10px;
+    text-align: center;
+    padding-right: 20px;
+
+    .descripcion_productos {
+        color: white;
+        font-size: x-large;
+        box-shadow: 0 0 45px rgb(88, 81, 185);
+    }
+
+}
+
+
+
+
+//pagina 4//
+.imagenes {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    flex-wrap: wrap;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+
+    .imagenes_img {
+        width: 300px;
+        height: 500px;
+        margin: 15px;
+
+        
+    }
+
+}
+
+
+.imagenes_img:hover{
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1)}
+
+.dibujos {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Play', sans-serif;
+    flex-wrap: wrap;
+    box-shadow: 0 0 60px rgb(179, 162, 241);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+.final {
+
+    @extend .p-4
+}
+.text-center {
+    text-align: center !important;
+}
+
+
+.p-4 {
+    padding: 1.5px !important;
+    color: wheat;
+}
+a{
+    text-decoration: none;
+}
+a{
+    @extend .p-4
+}
+
+
+
+
+
+
+@media (max-width: 450px) {
+    .ducato2 {
+        background-image: url(img/homero.jpeg);
+        border-radius: 0px;
+    }
+.impresora {
+        width: 80%
+    }
+
+    .d-block {
+        width: 50%;
+    }
+
+    .carousel-item-next,
+    .carousel-item-prev,
+    .carousel-item.active {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dibujos {
+        text-align: center;
+    }
+
+    .muestra {
+        text-align: center;
+    }
+    .logo{
+       
+        width: 100px;
+        height: 100px;
+    }
+}
+@media  (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+    justify-content: space-around;
+}}
+ 
+$colores:(
+    primario:green,
+    secundario:red,
+
+);
+
+.fa-whatsapp {
+    background-color: map-get($colores, primario);
+}
+.fa-instagram{
+    background-color: map-get($colores , secundario );
+}
